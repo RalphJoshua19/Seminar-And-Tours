@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminars & Webinars | Gold Theme</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <header class="header">
+      <div class="header-logo">PSU</div>
+      <div class="header-title">
+        <h3>Partido State University</h3>
+        <p>Computer Studies Department</p>
+      </div>
+    </header>
+
+    <!-- Profile Section -->
+    <div class="profile-card">
+      <div class="profile-avatar-wrapper">
+        <img src="profile_pic.jpg" alt="Ralph Joshua S. Obado" class="profile-avatar">
+      </div>
+      <div class="profile-info">
+        <h2 class="profile-name">Ralph Joshua S. Obado</h2>
+        <div class="profile-details">
+          <div class="detail-row">
+            <span class="detail-label">Course:</span>
+            <span class="detail-value">Bachelor of Science in Information Technology</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Section:</span>
+            <span class="detail-value">4E</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Subject:</span>
+            <span class="detail-value">Seminars and Tours</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="section-title">Seminars & Webinars</h1>
+    <p class="section-subtitle">Documented seminars and webinars attended.</p>
+
+    <!-- Seminar Details Card -->
+    <div class="seminar-card" id="seminar-card">
+      <div class="status-badge">Done</div>
+
+      <div class="meta-pills">
+        <div class="pill">Organized: <span id="sem-date">August 25, 2026</span></div>
+        <div class="pill">Duration: <span id="sem-hours">3 Hours</span></div>
+        <div class="pill">Issuer: <span id="sem-issuer">DOST CALABARZON - PSTO Laguna</span></div>
+      </div>
+
+      <h2 class="seminar-title" id="sem-title">BISTECH SEASON 2 EPISODE #8: ROBOTICS PROTOTYPE: IOT INTEGRATION PROJECTS</h2>
+
+      <div class="tags-row">
+        <span class="tag highlight">Certificated: Verified</span>
+        <span class="tag highlight">Platform: Online</span>
+      </div>
+
+      <p class="description" id="sem-desc">
+        This training provided practical knowledge on integrating IoT with robotics prototypes, focusing on hardware-software interaction and smart automation concepts.
+      </p>
+
+      <ul class="learnings-list" id="sem-learnings">
+        <li><strong>Robotics & IoT Integration:</strong> I learned how IoT connectivity can be embedded into robotic prototypes for real-time data exchange and remote control.</li>
+        <li><strong>Smart Prototyping:</strong> I gained insights into practical applications of IoT sensors and actuators in building functional automated systems.</li>
+      </ul>
+
+      <div class="btn-group">
+        <button class="btn" id="btn-proof" onclick="openProofModal()">[ View Proof Images ]</button>
+        <button class="btn" id="btn-cert" onclick="openAllCertsModal()">[ Open PDF Certificate ]</button>
+      </div>
+    </div>
+
+    <!-- Main Pagination Navigation -->
+    <div class="pagination-bar">
+      <button class="nav-btn" id="prev-btn" onclick="changePage(-1)">← Previous</button>
+      <div class="page-indicator" id="page-indicator">01 / 09</div>
+      <button class="nav-btn" id="next-btn" onclick="changePage(1)">Next →</button>
+    </div>
+
+    <!-- Certificates Showcase Section (PDF / Image Display) -->
+    <div class="cert-container">
+      <h2 class="section-title" style="font-size: 1.5rem;">Certificates</h2>
+      <p class="section-subtitle">Earned certifications and verified credentials.</p>
+
+      <div class="cert-frame" id="cert-frame">
+        <iframe id="cert-pdf-display" class="cert-pdf" type="application/pdf"></iframe>
+      </div>
+
+      <!-- Controls below Certificate Box -->
+      <div class="box-controls">
+        <button class="nav-btn" id="cert-prev-btn" onclick="changeCertPage(-1)">← Previous</button>
+        <span class="page-indicator" id="cert-page-indicator">01 / 09</span>
+        <button class="nav-btn" id="cert-next-btn" onclick="changeCertPage(1)">Next →</button>
+      </div>
+    </div>
+
+    <!-- NetAcad Badges Carousel -->
+    <div class="badges-section">
+      <h2 class="section-title" style="font-size: 1.5rem;">NetAcad Badges</h2>
+      <p class="section-subtitle">Cisco Networking Academy Badges and Certifications.</p>
+
+      <div class="badge-carousel-wrapper" id="carousel-wrapper">
+        <div class="badge-slider" id="badge-slider">
+          
+          <div class="badge-card active" onclick="goToBadge(0)">
+            <img class="badge-img" src="Introduction to Cybersecurity.png" alt="Introduction to Cybersecurity">
+            <div class="badge-title">Introduction to Cybersecurity</div>
+          </div>
+
+          <div class="badge-card" onclick="goToBadge(1)">
+            <img class="badge-img" src="Computer Hardware Basics.png" alt="Computer Hardware Basics">
+            <div class="badge-title">Computer Hardware Basics</div>
+          </div>
+
+          <div class="badge-card" onclick="goToBadge(2)">
+            <img class="badge-img" src="Introduction to Modern AI.png" alt="Introduction to Modern AI">
+            <div class="badge-title">Introduction to Modern AI</div>
+          </div>
+
+          <div class="badge-card" onclick="goToBadge(3)">
+            <img class="badge-img" src="Digital Awareness.png" alt="Digital Awareness">
+            <div class="badge-title">Digital Awareness</div>
+          </div>
+
+          <div class="badge-card" onclick="goToBadge(4)">
+            <img class="badge-img" src="Operating Systems Basics.png" alt="Operating Systems Basics">
+            <div class="badge-title">Operating Systems Basics</div>
+          </div>
+
+          <div class="badge-card" onclick="goToBadge(5)">
+            <img class="badge-img" src="Using Computer and Mobile Devices.png" alt="Using Computer and Mobile Devices">
+            <div class="badge-title">Using Computer and Mobile Devices</div>
+          </div>
+
+          <div class="badge-card" onclick="goToBadge(6)">
+            <img class="badge-img" src="Create Digital Content, Communicate and Collaborate Online.png" alt="Create Digital Content, Communicate and Collaborate Online">
+            <div class="badge-title">Create Digital Content, Communicate and Collaborate Online</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Controls & Dots below Badge Box -->
+      <div class="dots-container" id="dots-container"></div>
+
+      <div class="box-controls" style="margin-top: 20px;">
+        <button class="nav-btn" id="badge-prev-btn" onclick="changeBadge(-1)">← Previous</button>
+        <button class="nav-btn" id="badge-next-btn" onclick="changeBadge(1)">Next →</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Proof Modal Viewer -->
+  <div class="modal-overlay" id="proof-modal" onclick="closeProofModal(event)">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeProofModal(null, true)">&times;</span>
+      <h3 class="modal-title" id="modal-title">Proof Image</h3>
+      <div class="modal-body">
+        <img id="modal-img" src="" alt="Proof Image">
+      </div>
+      <!-- Proof Image Navigation Controls -->
+      <div class="box-controls" id="proof-modal-controls" style="margin-top: 15px; display: none;">
+        <button class="nav-btn" id="proof-prev-btn" onclick="changeProofImage(-1)">← Previous</button>
+        <span class="page-indicator" id="proof-page-indicator">01 / 01</span>
+        <button class="nav-btn" id="proof-next-btn" onclick="changeProofImage(1)">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- All Certificates Gallery Modal with Scrollable Sidebar -->
+  <div class="modal-overlay" id="all-certs-modal" onclick="closeCertsModal(event)">
+    <div class="modal-content certs-modal-content">
+      <span class="modal-close" onclick="closeCertsModal(null, true)">&times;</span>
+      <div class="certs-viewer-layout">
+        <!-- Scrollable Sidebar Listing All Certificates -->
+        <div class="certs-sidebar" id="certs-sidebar"></div>
+        <!-- Active Main Viewer -->
+        <div class="certs-main-view" id="certs-main-view">
+          <iframe id="modal-pdf-display" class="cert-pdf" type="application/pdf"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
